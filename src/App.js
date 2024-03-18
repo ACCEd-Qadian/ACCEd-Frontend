@@ -13,7 +13,16 @@ import { useEffect, useState } from "react";
 import PrivateRoute from "./PrivateRoute";
 
 function App() {
-  
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+
+  useEffect(() => {
+    const User = localStorage.getItem("user");
+    if (User) {
+      const foundUser = JSON.parse(User);
+      setIsAuthenticated(foundUser);
+    }
+  }, []);
   return (
     <div className="grid-container">
       <BrowserRouter>
@@ -22,18 +31,16 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Contact" element={<Contact />} />
-            <Route path="/CertificateVerify" element={<CertificateVerify/>} />
-            {/* <Route path="/AdminPanel" element={loggedinuser.isAdmin?<AdminPanel/>:<Navigate to={"/login"} />} /> */}
-            <Route path="/Register" element={<Register/>} />
-            <Route path="/Login" element={<Login/>} />
-            <Route element={<PrivateRoute />}>
-            <Route path="/Adminpanel" element={<PrivateRoute  />} />
-</Route>
-          
+            <Route path="/CertificateVerify" element={<CertificateVerify />} />
+            <Route path="/Register" element={<Register />} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/AdminPanel" element={<PrivateRoute isAuthenticated={isAuthenticated} />} />
           </Routes>
         </main>
         <footer className="footer">
-          <div className="">Copyright © 2001 ACCEd Qadian, India, All rights reserved.</div>
+          <div className="">
+            Copyright © 2001 ACCEd Qadian, India, All rights reserved.
+          </div>
         </footer>
       </BrowserRouter>
     </div>

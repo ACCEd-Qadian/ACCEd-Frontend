@@ -9,7 +9,7 @@ const Contact = () => {
             src="https://forms.gle/rS7YqizrhWPszGG38"
             width={"400"}
             height={"1200"}
-            frameborder="0"
+            // frameborder="0"
           ></iframe>
         </div>
 

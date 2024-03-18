@@ -40,11 +40,11 @@ function RedirecttoAdminpanel() {
           variant:"success",
           value:true
         })
-        if (response.data.isAdmin) {
-          RedirecttoAdminpanel()
-        }else{
-          Redirecttologedin()
-        }
+        // if (response.data.isAdmin) {
+        //   RedirecttoAdminpanel()
+        // }else{
+        // }
+        Redirecttologedin()
   } catch (error) {
       console.log(error)
       setAlert({
