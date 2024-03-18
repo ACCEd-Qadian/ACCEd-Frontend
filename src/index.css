@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.grid-container{
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr 5rem;
+  height: 100%;
+  grid-template-columns: 1fr;
+
+}
+
+main{
+  padding: 2rem;
+}
+
+footer{
+  background-color: #0d6efd;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
