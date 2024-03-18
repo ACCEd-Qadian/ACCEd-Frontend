@@ -34,10 +34,6 @@ const Register = () => {
                     variant:"success",
                     value:true
                   })
-                  setName("")
-                  setEmail("")
-                  setPassword("")
-                  setConfirmPassword("")
             } catch (error) {
                 console.log(error)
                 setAlert({
@@ -49,6 +45,7 @@ const Register = () => {
         }
   };
 
+  
   return (
     <Container className="LoginContainer">
     {alert.value && 

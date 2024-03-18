@@ -7,11 +7,6 @@ import { Link } from 'react-router-dom';
 const Navbar_Main = () => {
   const [loggedinuser, setLoggedinuser] = useState();
 
-  function redirectToLogin() {
-    window.location.href = '/login';
-  }
-
-
   useEffect(() => {
     const User = localStorage.getItem("user");
     if (User) {
@@ -20,21 +15,21 @@ const Navbar_Main = () => {
     }
   }, []);
 
-  console.log(loggedinuser)
+  // console.log(loggedinuser)
 
   const handlelogout =()=>{
     localStorage.removeItem('user');
-    redirectToLogin()
+    window.location.href = "http://localhost:3000/Login";
   }
 
   return (
     <div>
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
-          <Link className="navbar-brand" to={"/"} >ACCEd</Link>
+          <Link className="navbar-brand" to={"/"} > ACCEd</Link>
           <Nav className="me-auto">
           <Link className='nav-link' to={"/"} >Home</Link>
-          <Link className='nav-link' to={"/CertificateVerify"} >CertificateVerify</Link>
+          <Link className='nav-link' to={"/CertificateVerify"} >CertificateCheck</Link>
           <Link className='nav-link' to={"/Contact"} >Contact</Link>
           </Nav>
           <Nav>

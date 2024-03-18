@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import "./Login.css";
-import { Link,} from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios"
 import Alert from 'react-bootstrap/Alert';
-
+import  { Redirect } from 'react-router-dom'
 
 
 const Login = (props) => {
@@ -15,36 +15,36 @@ const Login = (props) => {
     variant:"",
     value:false
   });
-  const [loggedinuser, setLoggedinuser] = useState()
 
-  function redirectToDashboard() {
-    window.location.href = '/CertificateVerify';
-  }
-  function redirectToAdminDashboard() {
-    window.location.href = '/Adminpanel';
-  }
+  const [loggedinuser, setLoggedinuser] = useState();
 
+function Redirecttologedin() {
+  window.location.href = "http://localhost:3000/CertificateVerify";
+}
 
+function RedirecttoAdminpanel() {
+  window.location.href = "http://localhost:3000/Adminpanel";
+}
 
   const handleLogin = async(e) => {
     e.preventDefault();
     console.log(email, password);
+    const newemail = email.toLowerCase()
     try {
       const response = await axios.post("http://localhost:2000/login", {email, password})
       localStorage.setItem('user', JSON.stringify(response.data));
       setLoggedinuser(response.data)
       console.log(response)
       setAlert({
-          message: "Login Success",
+          message: "Loged in",
           variant:"success",
           value:true
         })
         if (response.data.isAdmin) {
-          redirectToAdminDashboard()
-        } else {
-          redirectToDashboard();
+          RedirecttoAdminpanel()
+        }else{
+          Redirecttologedin()
         }
-
   } catch (error) {
       console.log(error)
       setAlert({
@@ -57,6 +57,7 @@ const Login = (props) => {
 
 
   return (
+    <div className="login-box">
     <Container className="LoginContainer">
     {alert.value && 
     <Alert variant={alert.variant} onClose={()=>{setAlert({value:false})}} dismissible>
@@ -64,7 +65,7 @@ const Login = (props) => {
     </Alert>
     }
       <h2>Login</h2>
-      <Form onSubmit={handleLogin} className="w-50">
+      <Form onSubmit={handleLogin} className="">
         <Form.Group controlId="formBasicemail">
           <Form.Label>Email Address</Form.Label>
           <Form.Control
@@ -73,6 +74,7 @@ const Login = (props) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required={true}
+            autoComplete="off"
           />
         </Form.Group>
         <Form.Group controlId="password">
@@ -97,6 +99,7 @@ const Login = (props) => {
         </div>
       </Form>
     </Container>
+    </div>
   );
 };
 

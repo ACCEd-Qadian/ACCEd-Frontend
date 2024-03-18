@@ -39,14 +39,27 @@
 .pm-certificate-container {
     margin-top: 5rem;
   position: relative;
-  width: 800px;
+  width: 800px !important;
   height: 600px;
   background-color: #618597;
   padding: 30px;
   color: #333;
   font-family: 'Open Sans', sans-serif;
   box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-
+  /*background: -webkit-repeating-linear-gradient(
+    45deg,
+    #618597,
+    #618597 1px,
+    #b2cad6 1px,
+    #b2cad6 2px
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #618597,
+    #618597 1px,
+    #b2cad6 1px,
+    #b2cad6 2px
+  );*/
   
   .outer-border {
     width: 794px;
@@ -177,4 +190,20 @@
 .btnbox{
   display: flex;
   justify-content: center;
+}
+
+.CertificateVerify-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-box{
+
+  padding: 5rem;
+  margin: 2rem;
+  box-shadow: 2px 4px 10px #333;
+  border-radius: 8px;
+  max-width: fit-content;
 }
