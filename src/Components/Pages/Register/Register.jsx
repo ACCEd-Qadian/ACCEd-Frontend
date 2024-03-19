@@ -27,13 +27,19 @@ const Register = () => {
               })
         } else {
             try {
-                const response = await axios.post("http://localhost:2000/register", {name, email, password})
+              const newemail = email.toLowerCase()
+              console.log(newemail)
+                const response = await axios.post("http://localhost:2000/register", {name, newemail, password})
                 console.log(response)
                 setAlert({
                     message: response.data,
                     variant:"success",
                     value:true
                   })
+                  setEmail("")
+                  setName("")
+                  setPassword("")
+                  setConfirmPassword("")
             } catch (error) {
                 console.log(error)
                 setAlert({
@@ -54,7 +60,7 @@ const Register = () => {
     </Alert>
     }
       <h2>Create Account</h2>
-      <Form onSubmit={handleRegister} className="w-50">
+      <Form onSubmit={handleRegister} className="">
         <Form.Group controlId="formBasicname">
           <Form.Label>Name</Form.Label>
           <Form.Control
@@ -63,6 +69,7 @@ const Register = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required={true}
+            autoComplete="off"
           />
         </Form.Group>
 
@@ -74,6 +81,7 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required={true}
+            autoComplete="off"
           />
         </Form.Group>
         
@@ -99,6 +107,7 @@ const Register = () => {
               setConfirmPassword(e.target.value);
             }}
             required={true}
+            autoComplete="off"
           />
         </Form.Group>
         <Button type="submit" className="btn btn-primary" variant="Primary">
