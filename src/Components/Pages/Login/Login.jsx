@@ -19,11 +19,11 @@ const Login = (props) => {
   const [loggedinuser, setLoggedinuser] = useState();
 
 function Redirecttologedin() {
-  window.location.href = "http://localhost:3000/CertificateVerify";
+    window.location.replace(`${window.location.origin}/CertificateVerify`)
 }
 
 function RedirecttoAdminpanel() {
-  window.location.href = "http://localhost:3000/Adminpanel";
+  window.location.replace(`${window.location.origin}/Adminpanel`)
 }
 
   const handleLogin = async(e) => {
