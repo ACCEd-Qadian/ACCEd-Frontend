@@ -29,7 +29,7 @@ const Register = () => {
             try {
               const newemail = email.toLowerCase()
               console.log(newemail)
-                const response = await axios.post("http://localhost:2000/register", {name, newemail, password})
+                const response = await axios.post("https://stormy-singlet-crow.cyclic.app/register", {name, newemail, password})
                 console.log(response)
                 setAlert({
                     message: response.data,
