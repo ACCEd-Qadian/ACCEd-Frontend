@@ -31,7 +31,7 @@ function RedirecttoAdminpanel() {
     console.log(email, password);
     const newemail = email.toLowerCase()
     try {
-      const response = await axios.post("http://localhost:2000/login", {email, password})
+      const response = await axios.post("http://localhost:2000/login", {newemail, password})
       localStorage.setItem('user', JSON.stringify(response.data));
       setLoggedinuser(response.data)
       console.log(response)
@@ -40,11 +40,11 @@ function RedirecttoAdminpanel() {
           variant:"success",
           value:true
         })
-        // if (response.data.isAdmin) {
-        //   RedirecttoAdminpanel()
-        // }else{
-        // }
-        Redirecttologedin()
+        if (response.data.isAdmin) {
+          RedirecttoAdminpanel()
+        }else{
+          Redirecttologedin()
+        }
   } catch (error) {
       console.log(error)
       setAlert({
