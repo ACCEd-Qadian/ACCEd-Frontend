@@ -19,11 +19,11 @@ const Login = (props) => {
   const [loggedinuser, setLoggedinuser] = useState();
 
 function Redirecttologedin() {
-    window.location.replace(`${window.location.origin}/CertificateVerify`)
+     window.location.href = "https://acced.netlify.app/CertificateVerify";
 }
 
 function RedirecttoAdminpanel() {
-  window.location.replace(`${window.location.origin}/Profile`)
+       window.location.href = "https://acced.netlify.app/Profile";
 }
 
   const handleLogin = async(e) => {
