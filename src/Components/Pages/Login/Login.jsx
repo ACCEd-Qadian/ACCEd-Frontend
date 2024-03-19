@@ -23,7 +23,7 @@ function Redirecttologedin() {
 }
 
 function RedirecttoAdminpanel() {
-  window.location.replace(`${window.location.origin}/Adminpanel`)
+  window.location.replace(`${window.location.origin}/Profile`)
 }
 
   const handleLogin = async(e) => {
