@@ -22,7 +22,7 @@ const CertificateVerify = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:2000/search?enrollmentNumber=${searchEnrollmentNumber}`
+        `https://stormy-singlet-crow.cyclic.app/search?enrollmentNumber=${searchEnrollmentNumber}`
       );
       setAlert({
         message: "Certificate Verified",
