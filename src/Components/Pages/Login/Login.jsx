@@ -31,7 +31,7 @@ function RedirecttoAdminpanel() {
     console.log(email, password);
     const newemail = email.toLowerCase()
     try {
-      const response = await axios.post("http://localhost:2000/login", {newemail, password})
+      const response = await axios.post("https://stormy-singlet-crow.cyclic.app/login", {newemail, password})
       localStorage.setItem('user', JSON.stringify(response.data));
       setLoggedinuser(response.data)
       console.log(response)
