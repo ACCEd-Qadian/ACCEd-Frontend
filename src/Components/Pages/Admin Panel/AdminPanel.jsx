@@ -40,7 +40,7 @@ const AdminPanel = () => {
     console.log(studentData)
 
     try {
-      const response = await axios.post("http://localhost:2000/studentdata", studentData)
+      const response = await axios.post("https://stormy-singlet-crow.cyclic.app/studentdata", studentData)
       setAlert({
         message: response.data,
         variant:"success",
