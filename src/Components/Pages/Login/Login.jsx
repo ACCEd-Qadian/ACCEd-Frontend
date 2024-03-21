@@ -15,7 +15,6 @@ const Login = (props) => {
   });
 
   const [loggedinuser, setLoggedinuser] = useState();
-  // console.log(window.location.origin)
   function Redirecttologedin() {
     window.location.href = "https://acced.netlify.app";
   }
