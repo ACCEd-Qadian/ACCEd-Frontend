@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import axios from "axios"
-import Alert from 'react-bootstrap/Alert';
-
+import axios from "axios";
+import Alert from "react-bootstrap/Alert";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -11,54 +10,61 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [alert, setAlert] = useState({
-    message:"",
-    variant:"",
-    value:false
+    message: "",
+    variant: "",
+    value: false
   });
 
-  const handleRegister = async(e) => {
-
+  const handleRegister = async (e) => {
     e.preventDefault();
-        if (password !== confirmPassword) {
-            setAlert({
-                message: "Password and confirm password are not matching",
-                variant:"danger",
-                value:true
-              })
-        } else {
-            try {
-              const newemail = email.toLowerCase()
-              console.log(newemail)
-                const response = await axios.post("https://stormy-singlet-crow.cyclic.app/register", {name, newemail, password})
-                console.log(response)
-                setAlert({
-                    message: response.data,
-                    variant:"success",
-                    value:true
-                  })
-                  setEmail("")
-                  setName("")
-                  setPassword("")
-                  setConfirmPassword("")
-            } catch (error) {
-                console.log(error)
-                setAlert({
-                    message: error.response.data,
-                    variant:"danger",
-                    value:true
-                  })
-            }
-        }
+    if (password !== confirmPassword) {
+      setAlert({
+        message: "Password and confirm password are not matching",
+        variant: "danger",
+        value: true
+      });
+    } else {
+      try {
+        console.log(email);
+        const response = await axios.post("https://acced.cyclic.app/register", {
+          name,
+          email,
+          password
+        });
+        console.log(response);
+        setAlert({
+          message: "Registered Success",
+          variant: "success",
+          value: true
+        });
+        setEmail("");
+        setName("");
+        setPassword("");
+        setConfirmPassword("");
+      } catch (error) {
+        console.log(error);
+        setAlert({
+          message: "Something Error",
+          variant: "danger",
+          value: true
+        });
+      }
+    }
   };
 
-  
   return (
     <Container className="LoginContainer">
-    {alert.value && 
-    <Alert variant={alert.variant} onClose={()=>{setAlert({value:false})}} dismissible>
-      <Alert.Heading>{alert.message}</Alert.Heading>
-    </Alert>
-    }
+      {alert.value && (
+        <Alert
+          variant={alert.variant}
+          onClose={() => {
+            setAlert({ value: false });
+          }}
+          dismissible
+        >
+          <Alert.Heading>{alert.message}</Alert.Heading>
+        </Alert>
+      )}
       <h2>Create Account</h2>
       <Form onSubmit={handleRegister} className="">
         <Form.Group controlId="formBasicname">
@@ -84,7 +90,7 @@ const Register = () => {
             autoComplete="off"
           />
         </Form.Group>
-        
+
         <Form.Group controlId="password">
           <Form.Label>Password</Form.Label>
           <Form.Control
@@ -100,7 +106,7 @@ const Register = () => {
         <Form.Group controlId="confirmpassword">
           <Form.Label>Confirm Password</Form.Label>
           <Form.Control
-            type="confirmpassword"
+            type="password"
             placeholder="Enter Confirm Password"
             value={confirmPassword}
             onChange={(e) => {
