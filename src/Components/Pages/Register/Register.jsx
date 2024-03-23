@@ -3,12 +3,14 @@ import { Container, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Alert from "react-bootstrap/Alert";
+import Spinner from 'react-bootstrap/Spinner';
 
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({
     message: "",
     variant: "",
@@ -17,6 +19,7 @@ const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    setLoading(true)
     if (password !== confirmPassword) {
       setAlert({
         message: "Password and confirm password are not matching",
@@ -50,6 +53,7 @@ const Register = () => {
         });
       }
     }
+    setLoading(false)
   };
 
   return (
@@ -116,9 +120,11 @@ const Register = () => {
             autoComplete="off"
           />
         </Form.Group>
+        {loading ? <Spinner animation="border" variant="primary" />:
         <Button type="submit" className="btn btn-primary" variant="Primary">
           Register
         </Button>
+        }
         <div>
           <div>
             Already have an account? <Link to={"/Login"}>Login</Link>

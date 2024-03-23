@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Alert from "react-bootstrap/Alert";
+import Spinner from 'react-bootstrap/Spinner';
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({
     message: "",
     variant: "",
@@ -22,6 +24,7 @@ const Login = (props) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true)
     try {
       const response = await axios.post("https://acced.cyclic.app/login", {
         email,
@@ -44,6 +47,7 @@ const Login = (props) => {
         value: true
       });
     }
+    setLoading(false)
   };
 
   return (
@@ -85,9 +89,11 @@ const Login = (props) => {
               required={true}
             />
           </Form.Group>
+          {loading ? <Spinner animation="border" variant="primary" />:
           <Button type="submit" className="btn btn-primary" variant="Primary">
             Login
           </Button>
+        }
           <div>
             <div>
               New customer? <Link to={"/Register"}>Create your account</Link>
