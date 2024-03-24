@@ -34,7 +34,7 @@ const Login = (props) => {
         variant: "success",
         value: true
       });
-        // Redirecttologedin();
+        Redirecttologedin();
     } catch (error) {
       console.log(error);
       setAlert({
