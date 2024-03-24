@@ -23,7 +23,6 @@ const Navbar_Main = () => {
   };
 
   return (
-    <div>
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
           <Link className="navbar-brand" to={"/"}>
@@ -66,7 +65,6 @@ const Navbar_Main = () => {
           </Nav>
         </Container>
       </Navbar>
-    </div>
   );
 };
 

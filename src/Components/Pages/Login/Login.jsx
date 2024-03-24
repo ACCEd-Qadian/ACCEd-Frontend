@@ -16,11 +16,9 @@ const Login = (props) => {
     value: false
   });
 
-  const [loggedinuser, setLoggedinuser] = useState();
   function Redirecttologedin() {
     window.location.href = "https://acced.netlify.app";
   }
-
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -31,14 +29,12 @@ const Login = (props) => {
         password
       });
       localStorage.setItem("user", JSON.stringify(response.data));
-      setLoggedinuser(response.data);
-      console.log(response);
       setAlert({
         message: "Loged in",
         variant: "success",
         value: true
       });
-        Redirecttologedin();
+        // Redirecttologedin();
     } catch (error) {
       console.log(error);
       setAlert({
@@ -89,6 +85,11 @@ const Login = (props) => {
               required={true}
             />
           </Form.Group>
+          <div className="text-end">
+            <span>
+              <Link to={"/Forgotpassword"}>Forgot Password?</Link>
+            </span>
+          </div>
           {loading ? <Spinner animation="border" variant="primary" />:
           <Button type="submit" className="btn btn-primary" variant="Primary">
             Login

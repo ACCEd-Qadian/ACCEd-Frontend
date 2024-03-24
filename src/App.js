@@ -10,6 +10,8 @@ import Register from "./Components/Pages/Register/Register";
 import Login from "./Components/Pages/Login/Login";
 import { useEffect, useState } from "react";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "./Components/Pages/Profile/Profile";
+import ForgotPassword from "./Components/Pages/Login/ForgotPassword";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -25,7 +27,9 @@ function App() {
   return (
     <div className="grid-container">
       <BrowserRouter>
+      <header>
         <Navbar_Main />
+      </header>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -33,6 +37,8 @@ function App() {
             <Route path="/CertificateVerify" element={<CertificateVerify />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Login" element={<Login />} />
+            <Route path="/Forgotpassword" element={<ForgotPassword />} />
+            <Route path="/Profile" element={<Profile isAuthenticated={isAuthenticated} />} />
             <Route path="/AdminPanel" element={<PrivateRoute isAuthenticated={isAuthenticated} />} />
           </Routes>
         </main>

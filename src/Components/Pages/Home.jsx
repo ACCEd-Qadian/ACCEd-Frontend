@@ -76,25 +76,25 @@ const Home = () => {
       {/*  */}
 
       <section className="my-5 mt-5" id="courses">
-        <div class="text-center">
-          <h2 class="main-heading">Our Courses</h2>
+        <div className="text-center">
+          <h2 className="main-heading">Our Courses</h2>
         </div>
 
-        <div class="container my-5 ">
-          <div class="row text-center " style={{ display: "flex", justifyContent:"center" }}>
-            {courseName.map((item) => {
-              return <div className="course-box">{item}</div>;
+        <div className="container my-5 ">
+          <div className="row text-center " style={{ display: "flex", justifyContent:"center" }}>
+            {courseName.map((item,key) => {
+              return <div className="course-box"  key={key}>{item}</div>;
             })}
           </div>
         </div>
       </section>
 
       <section className="my-5 mt-5" id="">
-        <div class="text-center">
-          <h2 class="main-heading">Our Features</h2>
+        <div className="text-center">
+          <h2 className="main-heading">Our Features</h2>
         </div>
 
-        <div class="container my-5 features-container">
+        <div className="container my-5 features-container">
           <ul>
             <li>Spacious Building</li>
             <li>Fully Air Conditioned Lab</li>
@@ -111,11 +111,11 @@ const Home = () => {
       </section>
 
       <section className="my-5 mt-5" id="">
-        <div class="text-center">
-          <h2 class="main-heading">Our Objectives</h2>
+        <div className="text-center">
+          <h2 className="main-heading">Our Objectives</h2>
         </div>
 
-        <div class="container my-5 objective-container">
+        <div className="container my-5 objective-container">
           <div className="img-box2">
             <img src={img4} alt="" />
           </div>
@@ -134,11 +134,11 @@ const Home = () => {
       </section>
 
       <section className="my-5 mt-5" id="">
-        <div class="text-center">
-          <h2 class="main-heading">About Us</h2>
+        <div className="text-center">
+          <h2 className="main-heading">About Us</h2>
         </div>
 
-        <div class="container my-5 aboutus-box ">
+        <div className="container my-5 aboutus-box ">
           <div>
             <h4>Ahmadiyya Center for Computer Education (ACCEd)</h4>
             <p>(ISO Affiliated Center and NSIC Approved Computer Courses)</p>
