@@ -1,7 +1,7 @@
 // Profile.js
 import React, { useState } from "react";
 import { Container, Col, Card, Form, Button } from "react-bootstrap";
-import UserAvatar from "react-user-avatar";
+import UserAvatar from "react-avatar";
 import "./profile.css";
 
 const Profile = ({ isAuthenticated }) => {
@@ -10,7 +10,7 @@ const Profile = ({ isAuthenticated }) => {
     <Container>
       <div className="profile-box">
         <Col md={4} className="d-flex mt-5 justify-content-center">
-          <UserAvatar size="100" name={user.name} />
+          <UserAvatar size="150" name={user.name} round={true}  />
         </Col>
 
         <Col md={8} className="mt-5">
