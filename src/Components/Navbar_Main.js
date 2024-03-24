@@ -19,7 +19,7 @@ const Navbar_Main = () => {
 
   const handlelogout = () => {
     localStorage.removeItem("user");
-    window.location.href = "https://acced.netlify.app";
+    window.location.href = "https://acced.netlify.app/login";
   };
 
   return (

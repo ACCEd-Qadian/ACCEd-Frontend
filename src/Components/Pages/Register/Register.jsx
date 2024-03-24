@@ -3,7 +3,7 @@ import { Container, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Alert from "react-bootstrap/Alert";
-import Spinner from 'react-bootstrap/Spinner';
+import Spinner from "react-bootstrap/Spinner";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -14,30 +14,33 @@ const Register = () => {
   const [alert, setAlert] = useState({
     message: "",
     variant: "",
-    value: false
+    value: false,
   });
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     if (password !== confirmPassword) {
-       return setAlert({
+      return setAlert({
         message: "Password and confirm password are not matching",
         variant: "danger",
-        value: true
+        value: true,
       });
+    setLoading(false);
     } else {
       try {
         const response = await axios.post("https://acced.cyclic.app/register", {
           name,
           email,
-          password
+          password,
         });
         setAlert({
           message: "Registered Success",
           variant: "success",
-          value: true
+          value: true,
         });
+        window.location.href = "https://acced.netlify.app/login";
+
         setEmail("");
         setName("");
         setPassword("");
@@ -47,11 +50,11 @@ const Register = () => {
         setAlert({
           message: "Something Error",
           variant: "danger",
-          value: true
+          value: true,
         });
       }
     }
-    setLoading(false)
+    setLoading(false);
   };
 
   return (
@@ -118,11 +121,13 @@ const Register = () => {
             autoComplete="off"
           />
         </Form.Group>
-        {loading ? <Spinner animation="border" variant="primary" />:
-        <Button type="submit" className="btn btn-primary" variant="Primary">
-          Register
-        </Button>
-        }
+        {loading ? (
+          <Spinner animation="border" variant="primary" />
+        ) : (
+          <Button type="submit" className="btn btn-primary" variant="Primary">
+            Register
+          </Button>
+        )}
         <div>
           <div>
             Already have an account? <Link to={"/Login"}>Login</Link>
