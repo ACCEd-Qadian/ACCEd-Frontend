@@ -21,12 +21,12 @@ const Register = () => {
     e.preventDefault();
     setLoading(true);
     if (password !== confirmPassword) {
+      setLoading(false);
       return setAlert({
         message: "Password and confirm password are not matching",
         variant: "danger",
         value: true,
       });
-    setLoading(false);
     } else {
       try {
         const response = await axios.post("https://acced.cyclic.app/register", {
