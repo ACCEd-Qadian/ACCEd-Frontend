@@ -47,7 +47,7 @@ const AdminPanel = () => {
     } catch (error) {
       console.log(error)
       setAlert({
-        message: "Network Error",
+        message: error.response.data.error,
         variant:"danger",
         value:true
       })
