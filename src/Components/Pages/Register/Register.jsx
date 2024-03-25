@@ -48,7 +48,7 @@ const Register = () => {
       } catch (error) {
         console.log(error);
         setAlert({
-          message: "Something Error",
+          message: error.response.data.error,
           variant: "danger",
           value: true,
         });
