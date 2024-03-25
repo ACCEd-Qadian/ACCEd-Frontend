@@ -43,6 +43,16 @@ const AdminPanel = () => {
         value:true
       })
       // console.log(response)
+      setStudentData({
+        studentName: "",
+        fatherName: "",
+        enrollmentNumber: "",
+        course: "",
+        grade:"",
+        startdate:"",
+        enddate:"",
+        date:""
+      })
       
     } catch (error) {
       console.log(error)
@@ -52,16 +62,6 @@ const AdminPanel = () => {
         value:true
       })
     }
-    setStudentData({
-      studentName: "",
-      fatherName: "",
-      enrollmentNumber: "",
-      course: "",
-      grade:"",
-      startdate:"",
-      enddate:"",
-      date:""
-    })
     setLoading(false)
   };
 
