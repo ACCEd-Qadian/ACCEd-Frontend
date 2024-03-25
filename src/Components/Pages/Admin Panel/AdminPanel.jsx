@@ -29,34 +29,29 @@ const AdminPanel = () => {
     setStudentData({ ...studentData, [name]: value });
   };
 
-  // const handleImageChange = (e) => {
-  //   setStudentData({ ...studentData, image: e.target.files[0] });
-  // };
-
 
   const handleSubmit = async(e) => {
-    setLoading(true)
     e.preventDefault();
-    console.log(studentData)
+    setLoading(true)
+    // console.log(studentData)
 
     try {
-      const response = await axios.post("https://stormy-singlet-crow.cyclic.app/studentdata", studentData)
+      const response = await axios.post("http://localhost:2000/uploadCertificate", studentData)
       setAlert({
-        message: response.data,
+        message: response.data.message,
         variant:"success",
         value:true
       })
-      console.log(response.data)
+      // console.log(response)
       
     } catch (error) {
       console.log(error)
       setAlert({
-        message: error.response.data,
+        message: "Network Error",
         variant:"danger",
         value:true
       })
     }
-    setLoading(false)
     setStudentData({
       studentName: "",
       fatherName: "",
@@ -67,6 +62,7 @@ const AdminPanel = () => {
       enddate:"",
       date:""
     })
+    setLoading(false)
   };
 
 

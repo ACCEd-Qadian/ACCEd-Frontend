@@ -7,7 +7,7 @@ import Certificate from "./Certificate";
 
 const CertificateVerify = () => {
   const [searchEnrollmentNumber, setSearchEnrollmentNumber] = useState("");
-  const [searchResult, setSearchResult] = useState("");
+  const [searchResult, setSearchResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({
     message: "",
@@ -22,7 +22,7 @@ const CertificateVerify = () => {
 
     try {
       const response = await axios.get(
-        `https://stormy-singlet-crow.cyclic.app/search?enrollmentNumber=${searchEnrollmentNumber}`
+        `http://localhost:2000/certificateSearch?enrollmentNumber=${searchEnrollmentNumber}`
       );
       setAlert({
         message: "Certificate Verified",
@@ -36,10 +36,11 @@ const CertificateVerify = () => {
     } catch (error) {
       console.log("error is " + error);
       setAlert({
-        message: error.response.data,
+        message: error.response.data.error,
         variant: "danger",
         value: true
       });
+      setSearchResult(null)
     }
     setLoading(false);
     setSearchEnrollmentNumber("");
@@ -58,6 +59,9 @@ const CertificateVerify = () => {
           <Alert.Heading>{alert.message}</Alert.Heading>
         </Alert>
       )}
+
+      {!searchResult &&
+      (
 
       <div className="certificate-box">
         <h2 className="text-center">Certificate Verification Status</h2>
@@ -88,6 +92,8 @@ const CertificateVerify = () => {
           </Form>
         </div>
       </div>
+      )}
+
       <div className="certificateshow text-center">
         {searchResult && <Certificate searchResult={searchResult} />}
       </div>
