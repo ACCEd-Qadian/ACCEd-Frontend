@@ -26,10 +26,10 @@ const Contact = () => {
             <b>Pincode:</b> 143516
           </div>
           <div>
-            <b>Phone:</b> 01872222900
+            <b>Phone:</b> 01872222900, 9988790588, 9878340588
           </div>
           <div>
-            <b>Email:</b> accedu@gmail.com
+            <b>Email:</b> tabassumbaby453@gmail.com
           </div>
         </div>
       </div>
