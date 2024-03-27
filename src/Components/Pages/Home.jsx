@@ -10,7 +10,7 @@ const Home = () => {
   const [courseName, setCourseName] = useState([
     "Computer Basic",
     "Accounting in Tally",
-    "Internet",
+    "Coral Draw",
     "Photoshop",
     "Audio Video Editing",
     "Punjabi Typing",
