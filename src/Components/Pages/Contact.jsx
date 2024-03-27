@@ -20,7 +20,13 @@ const Contact = () => {
             Ahmadiyya Qadian.
           </div>
           <div>
-            <b>Distt.:</b> Gurdaspur Punjab.
+            <b>Distt.:</b> Gurdaspur
+          </div>
+          <div>
+            <b>State:</b> Punjab
+          </div>
+          <div>
+            <b>Country:</b> India
           </div>
           <div>
             <b>Pincode:</b> 143516
