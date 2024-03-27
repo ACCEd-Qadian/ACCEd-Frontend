@@ -6,7 +6,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="message-box">
           <iframe
-            src="https://forms.gle/rS7YqizrhWPszGG38"
+            src="https://forms.gle/9Mz8TzkY5jLYrrH69"
             width={"400"}
             height={"1200"}
             // frameborder="0"
