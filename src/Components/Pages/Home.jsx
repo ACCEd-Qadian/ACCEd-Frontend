@@ -144,7 +144,7 @@ const Home = () => {
             <p>(ISO Affiliated Center and NSIC Approved Computer Courses)</p>
             <p>
               Ahmadiyya Center for Computer Education has been providing the
-              best Computer Courses in Qadian for more than 16 years. These
+              best Computer Courses in Qadian. These
               courses are offered to students from 5th to postgraduate level to
               help youngsters find employment in India and Abroad. Call@01872222900
             </p>
