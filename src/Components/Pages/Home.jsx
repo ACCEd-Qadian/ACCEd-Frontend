@@ -146,7 +146,7 @@ const Home = () => {
               Ahmadiyya Center for Computer Education has been providing the
               best Computer Courses in Qadian. These
               courses are offered to students from 5th to postgraduate level to
-              help youngsters find employment in India and Abroad. Call@01872222900
+              help youngsters find employment in India and Abroad. Call@01872222900, 9988790588, 9878340588
             </p>
           </div>
         <div className="img-box2">
