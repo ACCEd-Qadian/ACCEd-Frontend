@@ -51,3 +51,7 @@ footer{
   padding: 1rem; */
 
 }
+.message-box iframe{
+    height: auto;
+    min-height: 700px;
+}
