@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import img1 from "./images/RIYAN_20240327_103010_Sky Blue.jpg";
-// import img1 from "./images/computer-center.jpg";
+import img1 from "./images/lab2.jpg";
 import img2 from "./images/certificate.jpg";
-import img3 from "./images/courses2.jpg";
+import img3 from "./images/courses1.jpg";
 import img4 from "./images/education.jpg";
-import img5 from "./images/acced2.jpg"
+import img5 from "./images/acced2.jpg";
+import teacherimg from "./images/teacher.jpg";
 
 const Home = () => {
   const [courseName, setCourseName] = useState([
@@ -28,7 +28,7 @@ const Home = () => {
     "Diploma in Computer Application (DCA)",
     "Diploma in Computer Hardware & Networking",
     "Diploma in Finance Accounting Tally & Busy (DFA)",
-    "MS OFFICE - WORD, EXCEL, POWERPOINT, ACCESS, ETC."
+    "MS OFFICE - WORD, EXCEL, POWERPOINT, ACCESS, ETC.",
   ]);
   return (
     <div>
@@ -48,19 +48,41 @@ const Home = () => {
             </p>
           </Carousel.Caption> */}
           <div class="row first-carousel">
-          <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
-            <div class="container get-center">
-              <h1 class="mt-5 display-5" style={{color:"#ff4500", fontWeight:"bold"}}>ACCEd Qadian</h1>
-              <p class="my-para" style={{color:"#0076FA", fontWeight:"bold", fontSize:"18px"}}>Ahmadiyya Center for Computer Education Qadian</p>
-              <p class="my-para">Affiliated with Govt. of India.</p>
+            <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
+              <div class="container get-center">
+                <h1
+                  class="mt-5 display-5"
+                  style={{ color: "#ff4500", fontWeight: "bold" }}
+                >
+                  ACCEd Qadian
+                </h1>
+                <p
+                  class="my-para"
+                  style={{
+                    color: "#0076FA",
+                    fontWeight: "bold",
+                    fontSize: "18px",
+                  }}
+                >
+                  Ahmadiyya Center for Computer Education Qadian
+                </p>
+                <p class="my-para">Affiliated with Govt. of India.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
+              <div class="">
+                <img
+                  src={img1}
+                  class=" w-100 main-image "
+                  style={{
+                    borderRadius: "8px",
+                    filter: "drop-shadow(2px 4px 6px black)",
+                  }}
+                  alt="..."
+                />
+              </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
-            <div class="">
-              <img src={img1} class=" w-100 main-image " style={{borderRadius:"8px", filter:"drop-shadow(2px 4px 6px black)"}} alt="..."/>
-            </div>
-          </div>
-        </div>
         </Carousel.Item>
         <Carousel.Item>
           {/* <img
@@ -74,19 +96,33 @@ const Home = () => {
             <p>You will get a Certificate after completing a course.</p>
           </Carousel.Caption> */}
           <div class="row second-carousel">
-          <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
-            <div class="container get-center">
-              <h1 class="mt-5 display-5" style={{color:"#ff4500", fontWeight:"bold"}}>Get a Certificate</h1>
-              <p class="my-para" style={{color:"#0076FA", fontWeight:"bold", fontSize:"18px"}}>You will get a Certificate after completing a course.</p>
-              <p class="my-para">Affiliated with Govt. of India.</p>
+            <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
+              <div class="container get-center">
+                <h1
+                  class="mt-5 display-5"
+                  style={{ color: "#ff4500", fontWeight: "bold" }}
+                >
+                  Get a Certificate
+                </h1>
+                <p
+                  class="my-para"
+                  style={{
+                    color: "#0076FA",
+                    fontWeight: "bold",
+                    fontSize: "18px",
+                  }}
+                >
+                  You will get a Certificate after completing a course.
+                </p>
+                <p class="my-para">Affiliated with Govt. of India.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
+              <div class="">
+                <img src={img2} class=" w-100 main-image   " alt="..." />
+              </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
-            <div class="">
-              <img src={img2} class=" w-100 main-image   " alt="..."/>
-            </div>
-          </div>
-        </div>
         </Carousel.Item>
         <Carousel.Item>
           {/* <img
@@ -100,43 +136,76 @@ const Home = () => {
             <p>Here are various courses you can opt according to your need.</p>
           </Carousel.Caption> */}
           <div class="row second-carousel">
-          <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
-            <div class="container get-center">
-              <h1 class="mt-5 display-5" style={{color:"#ff4500", fontWeight:"bold"}}>Courses</h1>
-              <p class="my-para" style={{color:"#0076FA", fontWeight:"bold", fontSize:"18px"}}>Here are various Advanced Courses you can opt at a very low fees</p>
+            <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
+              <div class="container get-center">
+                <h1
+                  class="mt-5 display-5"
+                  style={{ color: "#ff4500", fontWeight: "bold" }}
+                >
+                  Courses
+                </h1>
+                <p
+                  class="my-para"
+                  style={{
+                    color: "#0076FA",
+                    fontWeight: "bold",
+                    fontSize: "18px",
+                  }}
+                >
+                  Here are various Advanced Courses you can opt at a very low
+                  fees
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
+              <div class="">
+                <img src={img3} class=" w-100 main-image   " alt="..." />
+              </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
-            <div class="">
-              <img src={img3} class=" w-100 main-image   " alt="..."/>
-            </div>
-          </div>
-        </div>
         </Carousel.Item>
       </Carousel>
       {/*  */}
 
-      <div class="carousel-item" >
+      <div class="carousel-item">
         <div class="row second-carousel ">
           <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
             <div class="container get-center">
-              <h2 class="mt-5 display-6" style={{color:"#0076FA", fontFamily:"cursive"}}><span
-                  class="display-4 a-main-font">F</span>ree <span class="display-4 a-main-font">H</span>ostel Facilities
+              <h2
+                class="mt-5 display-6"
+                style={{ color: "#0076FA", fontFamily: "cursive" }}
+              >
+                <span class="display-4 a-main-font">F</span>ree{" "}
+                <span class="display-4 a-main-font">H</span>ostel Facilities
               </h2>
-              <p class="my-para" style={{color:"#0076FA", fontWeight: "bold", fontSize:"18px"}}>for ahmadiyya Jamaat students
+              <p
+                class="my-para"
+                style={{
+                  color: "#0076FA",
+                  fontWeight: "bold",
+                  fontSize: "18px",
+                }}
+              >
+                for ahmadiyya Jamaat students
               </p>
-              <p class="my-para">Great news for Jamaat Ahmadiyya students in India! The Jamaat
-                will provide free hostels, meals, and monthly pocket money (Wajifa).</p>
+              <p class="my-para">
+                Great news for Jamaat Ahmadiyya students in India! The Jamaat
+                will provide free hostels, meals, and monthly pocket money
+                (Wajifa).
+              </p>
             </div>
           </div>
           <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
             <div>
-              <img src={img1} class=" w-100 main-image hostel-image  " alt="..."/>
+              <img
+                src={img1}
+                class=" w-100 main-image hostel-image  "
+                alt="..."
+              />
             </div>
           </div>
         </div>
       </div>
-
 
       {/*  */}
 
@@ -146,9 +215,16 @@ const Home = () => {
         </div>
 
         <div className="container my-5 ">
-          <div className="row text-center " style={{ display: "flex", justifyContent:"center" }}>
-            {courseName.map((item,key) => {
-              return <div className="course-box"  key={key}>{item}</div>;
+          <div
+            className="row text-center "
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            {courseName.map((item, key) => {
+              return (
+                <div className="course-box" key={key}>
+                  {item}
+                </div>
+              );
             })}
           </div>
         </div>
@@ -209,14 +285,80 @@ const Home = () => {
             <p>(ISO Affiliated Center and NSIC Approved Computer Courses)</p>
             <p>
               Ahmadiyya Center for Computer Education has been providing the
-              best Computer Courses in Qadian. These
-              courses are offered to students from 5th to postgraduate level to
-              help youngsters find employment in India and Abroad. Call@01872222900, 9988790588, 9878340588
+              best Computer Courses in Qadian. These courses are offered to
+              students from 5th to postgraduate level to help youngsters find
+              employment in India and Abroad. Call@01872222900, 9988790588,
+              9878340588
             </p>
           </div>
-        <div className="img-box2">
-          <img src={img5} alt="" />
+          <div className="img-box2">
+            <img src={img5} alt="" />
+          </div>
         </div>
+      </section>
+
+      <section class="my-5" id="the-team">
+        <div class="text-center">
+          <h1 class="main-heading">THE TEAM</h1>
+
+          {/* <p class="container my-para team-para mt-5">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
+            molestiae natus adipisci quasi, sit atque commodi? Molestiae numquam
+            porro culpa, sequi beatae molestias Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Quibusdam, officia.
+          </p> */}
+        </div>
+
+        <div class=" row mt-5">
+          <div class="card mx-auto" style={{ width: "18rem" }}>
+            <div class="text-center mt-5">
+              <div class="">
+                <img src={teacherimg} class="team-profile" alt="" />
+              </div>
+            </div>
+
+            <div class="text-center mt-3">
+              <h5 class="card-title main-heading">Tabassum Begum</h5>
+              <h6 class="card-subtitle mb-2 text-muted">
+                Incharge Computer Center
+              </h6>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text my-para">
+              She has more than 8+ years of experience. Graduated in Bachelor of Computer Application. 
+              </p>
+
+              <div class="text-center mx-auto">
+                <div class="container">
+                  <a href="">
+                    <i
+                      class="fa-solid fa-phone mx-2 icon-color"
+                      style={{ fontSize: "16px" }}
+                    ></i>
+                  </a>
+                  <a href="">
+                    <i
+                      class="fa-solid fa-envelope icon-color"
+                      style={{ fontSize: "16px" }}
+                    ></i>
+                  </a>
+                  <a href="">
+                    <i
+                      class="fa-brands fa-whatsapp mx-2 icon-color"
+                      style={{ fontSize: "16px" }}
+                    ></i>
+                  </a>
+                  <a href="">
+                    <i
+                      class="fa-brands fa-facebook mx-2 icon-color"
+                      style={{ fontSize: "16px" }}
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
