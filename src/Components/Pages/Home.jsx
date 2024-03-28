@@ -47,17 +47,17 @@ const Home = () => {
               at nominal Fee.
             </p>
           </Carousel.Caption> */}
-          <div class="row first-carousel">
-            <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
-              <div class="container get-center">
+          <div className="row first-carousel">
+            <div className="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
+              <div className="container get-center">
                 <h1
-                  class="mt-5 display-5"
+                  className="mt-5 display-5"
                   style={{ color: "#ff4500", fontWeight: "bold" }}
                 >
                   ACCEd Qadian
                 </h1>
                 <p
-                  class="my-para"
+                  className="my-para"
                   style={{
                     color: "#0076FA",
                     fontWeight: "bold",
@@ -66,14 +66,14 @@ const Home = () => {
                 >
                   Ahmadiyya Center for Computer Education Qadian
                 </p>
-                <p class="my-para">Affiliated with Govt. of India.</p>
+                <p className="my-para">Affiliated with Govt. of India.</p>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
-              <div class="">
+            <div className="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
+              <div className="">
                 <img
                   src={img1}
-                  class=" w-100 main-image "
+                  className=" w-100 main-image "
                   style={{
                     borderRadius: "8px",
                     filter: "drop-shadow(2px 4px 6px black)",
@@ -95,17 +95,17 @@ const Home = () => {
             <h4>Get a Certificate</h4>
             <p>You will get a Certificate after completing a course.</p>
           </Carousel.Caption> */}
-          <div class="row second-carousel">
-            <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
-              <div class="container get-center">
+          <div className="row second-carousel">
+            <div className="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
+              <div className="container get-center">
                 <h1
-                  class="mt-5 display-5"
+                  className="mt-5 display-5"
                   style={{ color: "#ff4500", fontWeight: "bold" }}
                 >
                   Get a Certificate
                 </h1>
                 <p
-                  class="my-para"
+                  className="my-para"
                   style={{
                     color: "#0076FA",
                     fontWeight: "bold",
@@ -114,12 +114,12 @@ const Home = () => {
                 >
                   You will get a Certificate after completing a course.
                 </p>
-                <p class="my-para">Affiliated with Govt. of India.</p>
+                <p className="my-para">Affiliated with Govt. of India.</p>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
-              <div class="">
-                <img src={img2} class=" w-100 main-image   " alt="..." />
+            <div className="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
+              <div className="">
+                <img src={img2} className=" w-100 main-image   " alt="..." />
               </div>
             </div>
           </div>
@@ -135,17 +135,17 @@ const Home = () => {
             <h4>Courses</h4>
             <p>Here are various courses you can opt according to your need.</p>
           </Carousel.Caption> */}
-          <div class="row second-carousel">
-            <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
-              <div class="container get-center">
+          <div className="row second-carousel">
+            <div className="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
+              <div className="container get-center">
                 <h1
-                  class="mt-5 display-5"
+                  className="mt-5 display-5"
                   style={{ color: "#ff4500", fontWeight: "bold" }}
                 >
                   Courses
                 </h1>
                 <p
-                  class="my-para"
+                  className="my-para"
                   style={{
                     color: "#0076FA",
                     fontWeight: "bold",
@@ -157,9 +157,9 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
-              <div class="">
-                <img src={img3} class=" w-100 main-image   " alt="..." />
+            <div className="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
+              <div className="">
+                <img src={img3} className=" w-100 main-image   " alt="..." />
               </div>
             </div>
           </div>
@@ -167,19 +167,19 @@ const Home = () => {
       </Carousel>
       {/*  */}
 
-      <div class="carousel-item">
-        <div class="row second-carousel ">
-          <div class="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
-            <div class="container get-center">
+      <div className="carousel-item">
+        <div className="row second-carousel ">
+          <div className="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
+            <div className="container get-center">
               <h2
-                class="mt-5 display-6"
+                className="mt-5 display-6"
                 style={{ color: "#0076FA", fontFamily: "cursive" }}
               >
-                <span class="display-4 a-main-font">F</span>ree{" "}
-                <span class="display-4 a-main-font">H</span>ostel Facilities
+                <span className="display-4 a-main-font">F</span>ree{" "}
+                <span className="display-4 a-main-font">H</span>ostel Facilities
               </h2>
               <p
-                class="my-para"
+                className="my-para"
                 style={{
                   color: "#0076FA",
                   fontWeight: "bold",
@@ -188,18 +188,18 @@ const Home = () => {
               >
                 for ahmadiyya Jamaat students
               </p>
-              <p class="my-para">
+              <p className="my-para">
                 Great news for Jamaat Ahmadiyya students in India! The Jamaat
                 will provide free hostels, meals, and monthly pocket money
                 (Wajifa).
               </p>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
+          <div className="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
             <div>
               <img
                 src={img1}
-                class=" w-100 main-image hostel-image  "
+                className=" w-100 main-image hostel-image  "
                 alt="..."
               />
             </div>
@@ -297,11 +297,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section class="my-5" id="the-team">
-        <div class="text-center">
-          <h1 class="main-heading">THE TEAM</h1>
+      <section className="my-5" id="the-team">
+        <div className="text-center">
+          <h1 className="main-heading">THE TEAM</h1>
 
-          {/* <p class="container my-para team-para mt-5">
+          {/* <p className="container my-para team-para mt-5">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
             molestiae natus adipisci quasi, sit atque commodi? Molestiae numquam
             porro culpa, sequi beatae molestias Lorem ipsum dolor sit amet,
@@ -309,49 +309,49 @@ const Home = () => {
           </p> */}
         </div>
 
-        <div class=" row mt-5">
-          <div class="card mx-auto" style={{ width: "18rem" }}>
-            <div class="text-center mt-5">
-              <div class="">
-                <img src={teacherimg} class="team-profile" alt="" />
+        <div className=" row mt-5">
+          <div className="card mx-auto" style={{ width: "18rem" }}>
+            <div className="text-center mt-5">
+              <div className="">
+                <img src={teacherimg} className="team-profile" alt="" />
               </div>
             </div>
 
-            <div class="text-center mt-3">
-              <h5 class="card-title main-heading">Tabassum Begum</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
+            <div className="text-center mt-3">
+              <h5 className="card-title main-heading">Mrs. Tabassum Begum</h5>
+              <h6 className="card-subtitle mb-2 text-muted">
                 Incharge Computer Center
               </h6>
             </div>
 
-            <div class="card-body">
-              <p class="card-text my-para">
+            <div className="card-body">
+              <p className="card-text my-para">
               She has more than 8+ years of experience. Graduated in Bachelor of Computer Application. 
               </p>
 
-              <div class="text-center mx-auto">
-                <div class="container">
+              <div className="text-center mx-auto">
+                <div className="container">
                   <a href="">
                     <i
-                      class="fa-solid fa-phone mx-2 icon-color"
+                      className="fa-solid fa-phone mx-2 icon-color"
                       style={{ fontSize: "16px" }}
                     ></i>
                   </a>
                   <a href="">
                     <i
-                      class="fa-solid fa-envelope icon-color"
+                      className="fa-solid fa-envelope icon-color"
                       style={{ fontSize: "16px" }}
                     ></i>
                   </a>
                   <a href="">
                     <i
-                      class="fa-brands fa-whatsapp mx-2 icon-color"
+                      className="fa-brands fa-whatsapp mx-2 icon-color"
                       style={{ fontSize: "16px" }}
                     ></i>
                   </a>
                   <a href="">
                     <i
-                      class="fa-brands fa-facebook mx-2 icon-color"
+                      className="fa-brands fa-facebook mx-2 icon-color"
                       style={{ fontSize: "16px" }}
                     ></i>
                   </a>
