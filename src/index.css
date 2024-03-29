@@ -127,6 +127,6 @@ footer{
     width: 100% !important;
   }
   .LoginContainer form{
-    min-width: auto;
+    min-width: auto !important;
   }
 }
