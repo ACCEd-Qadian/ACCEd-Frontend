@@ -113,4 +113,7 @@ footer{
   .contact-container .address-box{
     margin-top: 2rem !important;
   }
+  .aboutus-box img{
+    width: 100% !important;
+  }
 }
