@@ -23,14 +23,14 @@ const Navbar_Main = () => {
   };
 
   return (
-      <Navbar bg="primary" data-bs-theme="dark">
-        <Container>
-          <Link className="navbar-brand" to={"/"}>
-            {" "}
-            ACCEd
-          </Link>
+    <>
+      <Navbar expand="lg" bg="primary" data-bs-theme="dark">
+      <Container>
+        <Navbar.Brand href="/">ACCEd</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className="nav-link" to={"/"}>
+          <Link className="nav-link" to={"/"}>
               Home
             </Link>
             <Link className="nav-link" to={"/CertificateVerify"}>
@@ -63,8 +63,10 @@ const Navbar_Main = () => {
               </Link>
             )}
           </Nav>
-        </Container>
-      </Navbar>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+      </>
   );
 };
 

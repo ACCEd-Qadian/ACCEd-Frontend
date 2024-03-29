@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from "react-router-dom"
 import Carousel from "react-bootstrap/Carousel";
 import img1 from "./images/lab2.jpg";
 import img2 from "./images/certificate.jpg";
@@ -34,19 +35,6 @@ const Home = () => {
     <div>
       <Carousel className="carousel-box" data-bs-theme="dark">
         <Carousel.Item>
-          {/* <img
-            className="d-block "
-            src={img1}
-            alt="First slide"
-            style={{ width: "30%" }}
-          />
-          <Carousel.Caption>
-            <h4>Ahmadiyya Center for Computer Education (Qadian)</h4>
-            <p>
-              Fully Air Conditioned Lab. Free Internet Facility Advanced courses
-              at nominal Fee.
-            </p>
-          </Carousel.Caption> */}
           <div className="row first-carousel">
             <div className="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
               <div className="container get-center">
@@ -64,7 +52,7 @@ const Home = () => {
                     fontSize: "18px",
                   }}
                 >
-                  Ahmadiyya Center for Computer Education Qadian
+                  Ahmadiyya Center for Computer Education
                 </p>
                 <p className="my-para">Affiliated with Govt. of India.</p>
               </div>
@@ -85,16 +73,6 @@ const Home = () => {
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          {/* <img
-            className="d-block "
-            src={img2}
-            alt="Second slide"
-            style={{ width: "30%" }}
-          />
-          <Carousel.Caption>
-            <h4>Get a Certificate</h4>
-            <p>You will get a Certificate after completing a course.</p>
-          </Carousel.Caption> */}
           <div className="row second-carousel">
             <div className="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
               <div className="container get-center">
@@ -112,7 +90,7 @@ const Home = () => {
                     fontSize: "18px",
                   }}
                 >
-                  You will get a Certificate after completing a course.
+                  Get a Certificate after completing a course.
                 </p>
                 <p className="my-para">Affiliated with Govt. of India.</p>
               </div>
@@ -125,16 +103,6 @@ const Home = () => {
           </div>
         </Carousel.Item>
         <Carousel.Item>
-          {/* <img
-            className="d-block"
-            src={img3}
-            alt="Third slide"
-            style={{ width: "30%" }}
-          />
-          <Carousel.Caption>
-            <h4>Courses</h4>
-            <p>Here are various courses you can opt according to your need.</p>
-          </Carousel.Caption> */}
           <div className="row second-carousel">
             <div className="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
               <div className="container get-center">
@@ -152,9 +120,9 @@ const Home = () => {
                     fontSize: "18px",
                   }}
                 >
-                  Here are various Advanced Courses you can opt at a very low
-                  fees
+                  Advanced Courses at a very low fees
                 </p>
+                <p className="my-para">Basics to Advanced Courses</p>
               </div>
             </div>
             <div className="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
@@ -167,45 +135,7 @@ const Home = () => {
       </Carousel>
       {/*  */}
 
-      <div className="carousel-item">
-        <div className="row second-carousel ">
-          <div className="col-lg-6 col-md-12 col-12 col-xxl-6  item-position container top-heading">
-            <div className="container get-center">
-              <h2
-                className="mt-5 display-6"
-                style={{ color: "#0076FA", fontFamily: "cursive" }}
-              >
-                <span className="display-4 a-main-font">F</span>ree{" "}
-                <span className="display-4 a-main-font">H</span>ostel Facilities
-              </h2>
-              <p
-                className="my-para"
-                style={{
-                  color: "#0076FA",
-                  fontWeight: "bold",
-                  fontSize: "18px",
-                }}
-              >
-                for ahmadiyya Jamaat students
-              </p>
-              <p className="my-para">
-                Great news for Jamaat Ahmadiyya students in India! The Jamaat
-                will provide free hostels, meals, and monthly pocket money
-                (Wajifa).
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
-            <div>
-              <img
-                src={img1}
-                className=" w-100 main-image hostel-image  "
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/*  */}
 
@@ -331,30 +261,30 @@ const Home = () => {
 
               <div className="text-center mx-auto">
                 <div className="container">
-                  <a href="">
+                  <Link to="/contact">
                     <i
                       className="fa-solid fa-phone mx-2 icon-color"
                       style={{ fontSize: "16px" }}
                     ></i>
-                  </a>
-                  <a href="">
+                  </Link>
+                  <Link to="/contact">
                     <i
                       className="fa-solid fa-envelope icon-color"
                       style={{ fontSize: "16px" }}
                     ></i>
-                  </a>
-                  <a href="">
+                  </Link>
+                  <Link to="/contact">
                     <i
                       className="fa-brands fa-whatsapp mx-2 icon-color"
                       style={{ fontSize: "16px" }}
                     ></i>
-                  </a>
-                  <a href="">
+                  </Link>
+                  <Link to="/contact">
                     <i
                       className="fa-brands fa-facebook mx-2 icon-color"
                       style={{ fontSize: "16px" }}
                     ></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
