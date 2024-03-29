@@ -63,7 +63,14 @@ footer{
   border-width: 0.5px;
 }
 
-@media (max-width: 779.98px) {
+/* @media only screen and (max-width: 425.98px) {
+  .course-box{
+    width: 8rem !important;
+    font-size: 12px !important;
+  }
+} */
+
+@media only screen and (max-width: 779.98px) {
   .objective-container{
     flex-direction: column;
     text-align: center;
@@ -79,8 +86,8 @@ footer{
     width: 100% !important;
   }
   .course-box{
-    width: 10rem !important;
-    font-size: 14px;
+    width: 8rem !important;
+    font-size: 12px;
   }
   .features-container li{
     font-size: 16px !important;
@@ -115,5 +122,11 @@ footer{
   }
   .aboutus-box img{
     width: 100% !important;
+  }
+  .objective-container img{
+    width: 100% !important;
+  }
+  .LoginContainer form{
+    min-width: auto;
   }
 }
