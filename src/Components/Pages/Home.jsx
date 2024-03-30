@@ -54,7 +54,7 @@ const Home = () => {
                 >
                   Ahmadiyya Center for Computer Education
                 </p>
-                <p className="my-para">Affiliated with Govt. of India.</p>
+                <p className="my-para">ISO Certified </p>
               </div>
             </div>
             <div className="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
@@ -92,7 +92,7 @@ const Home = () => {
                 >
                   Get a Certificate after completing a course.
                 </p>
-                <p className="my-para">Affiliated with Govt. of India.</p>
+                <p className="my-para">ISO Certified </p>
               </div>
             </div>
             <div className="col-lg-6 col-md-12 col-12 col-xxl-6 text-start get-middle ">
