@@ -227,70 +227,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="my-5" id="the-team">
-        <div className="text-center">
-          <h1 className="main-heading">THE TEAM</h1>
-
-          {/* <p className="container my-para team-para mt-5">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
-            molestiae natus adipisci quasi, sit atque commodi? Molestiae numquam
-            porro culpa, sequi beatae molestias Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Quibusdam, officia.
-          </p> */}
-        </div>
-
-        <div className=" row mt-5">
-          <div className="card mx-auto" style={{ width: "18rem" }}>
-            <div className="text-center mt-5">
-              <div className="">
-                <img src={teacherimg} className="team-profile" alt="" />
-              </div>
-            </div>
-
-            <div className="text-center mt-3">
-              <h5 className="card-title main-heading">Mrs. Tabassum Begum</h5>
-              <h6 className="card-subtitle mb-2 text-muted">
-                Incharge Computer Center
-              </h6>
-            </div>
-
-            <div className="card-body">
-              <p className="card-text my-para">
-              She has more than 8+ years of experience. Graduated in Bachelor of Computer Application. 
-              </p>
-
-              <div className="text-center mx-auto">
-                <div className="container">
-                  <Link to="/contact">
-                    <i
-                      className="fa-solid fa-phone mx-2 icon-color"
-                      style={{ fontSize: "16px" }}
-                    ></i>
-                  </Link>
-                  <Link to="/contact">
-                    <i
-                      className="fa-solid fa-envelope icon-color"
-                      style={{ fontSize: "16px" }}
-                    ></i>
-                  </Link>
-                  <Link to="/contact">
-                    <i
-                      className="fa-brands fa-whatsapp mx-2 icon-color"
-                      style={{ fontSize: "16px" }}
-                    ></i>
-                  </Link>
-                  <Link to="/contact">
-                    <i
-                      className="fa-brands fa-facebook mx-2 icon-color"
-                      style={{ fontSize: "16px" }}
-                    ></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
