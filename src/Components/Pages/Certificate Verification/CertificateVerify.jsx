@@ -22,7 +22,7 @@ const CertificateVerify = () => {
 
     try {
       const response = await axios.get(
-        `https://acced.cyclic.app/certificateSearch?enrollmentNumber=${searchEnrollmentNumber}`
+        `https://acced.onrender.com/certificateSearch?enrollmentNumber=${searchEnrollmentNumber}`
       );
       setAlert({
         message: "Certificate Verified",
