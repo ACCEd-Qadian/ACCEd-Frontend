@@ -57,7 +57,7 @@ const ForgotPassword = () => {
     } else {
       try {
         const response = await axios.post(
-          "https://acced.cyclic.app/resetpassword",
+          "https://acced.onrender.com/resetpassword",
           {
             email,
             otp,
