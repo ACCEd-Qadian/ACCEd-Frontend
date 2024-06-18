@@ -24,7 +24,7 @@ const Login = (props) => {
     e.preventDefault();
     setLoading(true)
     try {
-      const response = await axios.post("https://acced.cyclic.app/login", {
+      const response = await axios.post("https://acced.onrender.com/login", {
         email,
         password
       });
