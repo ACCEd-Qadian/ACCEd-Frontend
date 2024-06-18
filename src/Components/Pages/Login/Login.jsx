@@ -38,7 +38,7 @@ const Login = (props) => {
     } catch (error) {
       console.log(error);
       setAlert({
-        message: error.response.data.message,
+        message: error.response.data,
         variant: "danger",
         value: true
       });
