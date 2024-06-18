@@ -29,7 +29,7 @@ const Register = () => {
       });
     } else {
       try {
-        const response = await axios.post("https://acced.cyclic.app/register", {
+        const response = await axios.post("https://acced.onrender.com/register", {
           name,
           email,
           password,
