@@ -25,7 +25,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("https://acced.onrender.com/sendotp", {
+      const response = await axios.post("https://acced-2qci.onrender.com/sendotp", {
         email,
       });
       setAlert({
