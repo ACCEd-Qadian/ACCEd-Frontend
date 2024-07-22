@@ -24,7 +24,7 @@ const Login = (props) => {
     e.preventDefault();
     setLoading(true)
     try {
-      const response = await axios.post("https://acced.onrender.com/login", {
+      const response = await axios.post("https://acced-2qci.onrender.com/login", {
         email,
         password
       });
