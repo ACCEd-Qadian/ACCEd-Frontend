@@ -36,7 +36,7 @@ const AdminPanel = () => {
     // console.log(studentData)
 
     try {
-      const response = await axios.post("https://acced.cyclic.app/uploadCertificate", studentData)
+      const response = await axios.post("https://acced-2qci.onrender.com/uploadCertificate", studentData)
       setAlert({
         message: response.data.message,
         variant:"success",
