@@ -29,7 +29,7 @@ const Register = () => {
       });
     } else {
       try {
-        const response = await axios.post("https://acced.onrender.com/register", {
+        const response = await axios.post("https://acced-2qci.onrender.com/register", {
           name,
           email,
           password,
